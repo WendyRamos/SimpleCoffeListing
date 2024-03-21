@@ -1,0 +1,85 @@
+.container-coffe-listing {
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-coffe {
+    margin: 35px 0
+}
+
+.container-imagen {
+    width: 260px;
+    position: relative;
+    display: inline-block;
+}
+.coffe-image { 
+    border-radius: 15px;
+}
+
+.coffe-popular {
+    margin: 10px;
+    padding: 5px 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    position: absolute;
+    background-color: #F6C768;
+    border-radius: 60px;
+    top: 0px;
+}
+
+.container-description {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.coffe-name {
+    color: white;
+    font-size: 16px;
+}
+.coffe-price {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #BEE3CC;
+    font-size: 12px;
+}
+
+.container-rating {
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coffe-rating {
+    display: flex;
+    flex-direction: row;
+}
+.coffe-rating .start {
+    margin-right: 5px;
+}
+
+.coffe-rating .votes {
+    color: #6F757C;
+}
+.coffe-rating div {
+    display: flex;
+    align-items: center;
+}
+
+.no-rating {
+    color: #6F757C;
+    font-weight: bold;
+}
+
+.sold-out {
+    color: #ED735D;
+}
