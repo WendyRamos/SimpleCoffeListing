@@ -5,12 +5,16 @@ import StartFill from "../../images/Star_fill.svg";
 
 import "./CoffeListing.css";
 
-function CoffeListing() {
-  const { data } = useApiServices();
-  console.log(data);
+function CoffeListing(clicked) {
+  const { data }  = useApiServices();
+  const coffeeData = data !== null && clicked.showed === true ? data.filter(coffee => coffee.available === true) : data;
+  console.log(clicked)
   return (
     <div className="container-coffe-listing">
-      {data?.map((coffe) => (
+      {
+      
+      coffeeData?.map((coffe) => (    
+            
         <div className="card-coffe" key={coffe.id}>
           <div className="container-imagen">
             <img className="coffe-image" src={coffe.image} alt="Coffe"/>

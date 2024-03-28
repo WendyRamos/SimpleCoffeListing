@@ -1,21 +1,22 @@
 .container-coffe-listing {
     width: 70%;
-    margin: 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    margin: auto;
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+    justify-items: center;
+    justify-content: center;
 }
 .card-coffe {
+    width: 260px;
     margin: 35px 0
 }
 
 .container-imagen {
-    width: 260px;
     position: relative;
     display: inline-block;
 }
-.coffe-image { 
+.coffe-image {
     border-radius: 15px;
 }
 
@@ -83,3 +84,17 @@
 .sold-out {
     color: #ED735D;
 }
+
+@media screen and (max-width: 1024px) {
+	.container-coffe-listing {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+
+  @media screen and (max-width: 650px) {
+	.container-coffe-listing {
+	  grid-template-columns: repeat(1, 1fr);
+      /* justify-items: center; */
+      gap: 0px;
+	}
+  }

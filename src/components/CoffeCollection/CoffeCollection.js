@@ -1,23 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Vector from "../../images/vector.svg"
 import CoffeListing from "../CoffeListing/CoffeListing";
 import "./CoffeCollection.css"
 
 function CoffeCollection() {
+    const [clicked, setClicked] = useState(false);
+    const handleClick = (state) => {
+        setClicked(state);
+    }
     return (
         <div className="container">
-            {/* <div className="container-image-vector"> */}
-                <img className="image-vector" src={Vector}/>
-            {/* </div>            */}
+            <img className="image-vector" src={Vector} alt="vector"/>
             <div className="our-collection">
                 <h2>Our Collection</h2>
                 <p>
                     Introducing our Coffee Collection, a selection of unique coffees from different roast types and origins, expertly roasted in small batches and shipped fresh weekly.
                 </p>
-                <a href="#" className="all-products">All Products</a>
-                <a href="#" className="available-now">Available Now</a>
+                <button className="all-products" onClick={() => handleClick(false)}>All Products</button>
+                <button className="available-now" onClick={() => handleClick(true)}>Available Now</button>
             </div>
-            <CoffeListing/>
+            <CoffeListing showed={clicked}/>
         </div>
     );
 }

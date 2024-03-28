@@ -8,8 +8,12 @@ body {
   width: 100%;
   height: 100vh;
   background-color: #111315;
-  background-image: url("../public/images/bg-cafe.jpg");
+  background-image: url("/src/images/bg-cafe.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   font-family: 'DM Sans';
+}
+
+.App {
+  padding-bottom: 10px;
 }

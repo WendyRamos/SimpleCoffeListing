@@ -1,14 +1,12 @@
 .container {
     width: 85%;
+    margin: 12.5% auto 8%;
     background-color: #1B1D1F;
-    margin: 12.5% auto;
     border-radius: 13px;
     display: flex;
     flex-direction: column;
-    position:absolute;
+    position: relative;
     overflow: hidden;
-    left: 50%;
-    transform: translatex(-50%);
 }
 
 .image-vector{
@@ -37,22 +35,26 @@
     color: #6F757C;
 }
 
-.our-collection a {
+.our-collection button {
     margin: 5px;
     padding: 8px 13px;
+    background-color: transparent;
+    border: none;
     color: #FEF7EE;
     font-size: 14px;
     font-weight: 500;
-    text-decoration: none;
+    cursor: pointer;
 }
 
-.our-collection .all-products {
+.our-collection button:focus,
+.our-collection button:hover {
     background-color: #6F757C;
     border-radius: 6px;
 }
+
 @media screen and (max-width: 1024px) {
     .container {
-        width: 70%;
+        width: 80%;
     }
     .our-collection {
         width: 80%;
@@ -64,7 +66,7 @@
 
 @media screen and (max-width: 640px) {
     .container {
-        width: 60%;
+        width: 65%;
     }
     .our-collection {
         width: 80%;
